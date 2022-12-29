@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<ul>
+<li>a</li>
+</ul>
+<script type="text/javascript">
+var grades={
+	'list' :{'a':22, 'b':23, 'c':33}
+}
+alert(grades['list']) 
+//{'a':22, 'b':23, 'c':33}을 의미
+alert(grades['list']['a'])
+//a라는 key가 가리키는 값 22
+
+var grades={
+	'list' :{'a':22, 'b':23, 'c':33}
+	'show' :function () {
+		// body...
+		alert('Hello');
+	}
+}
+grades['show']();
+//Hello 출력
+
+var grades={
+	'list' :{'a':22, 'b':23, 'c':33}
+	'show' :function () {
+		// body...
+		alert(this.list); 
+		//this는 함수가 소속되어있는 객체 grades를 의미 
+		//list값이 출력
+	}
+}
+grades['show']();
+
+var grades={
+	'list' :{'a':22, 'b':23, 'c':33},
+	'show' :function () {
+		for(key in this.list){
+			console.log(key, this.list[key]);
+		}
+		
+	}
+}
+grades.show(); //a 22 b 23 c 33 출력
+
+
+</script>
+</body>
+</html>

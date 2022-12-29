@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<ul>
+<li>a</li>
+</ul>
+<script type="text/javascript">
+var grades = {'a':10, 'v':100};
+     //a라고 하는 key  
+for(key in grades){
+	document.write(key + "<br />");
+}
+for(var name in grades) {
+	document.write(name + grades[name] + "<br />");//a10 v100으로 출력됨 []는 인덱스값이 출력
+}
+for(var name in grades) {
+	document.write("<li>" + name + grades[name] +"</li>"); 
+}
+var arr=['a', 'b','c'];
+for(key in arr){
+	document.write(key +"<br/>"); //0 1 2출력됨
+}
+for(key in arr){
+	document.write(arr[key] +"<br/>"); //인덱스 값이 출력됨 
+}
+for(var name in arr){
+	document.write(arr[name]+"<br/>");
+}
+</script>
+</body>
+</html>
